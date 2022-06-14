@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <TITLE>Tu peso en otros planetas</TITLE>
+    <style type="text/css">
+    body{
+      background-color: green;
+    }
+    </style>
+  </HEAD>
+    <BODY>
+    <h1>ESTE ES TU PESO EN OTROS PLANETAS</h1>
+    <P>Ahora sabras <STRONG>cual es tu peso </STRONG>en otro planeta</P>
+    <P>ya sea Marte o Jupiter</P>
+    <script type="text/javascript">
+        var usuario = prompt("cual es tu peso?");
+        // con "/n" dentro del prompt agregamos un espacio para que no todo quede dentro de una sola linea
+        var planeta = parseInt(prompt("Elige tu planeta /n 1 es marte y 2 es Jupiter"))
+        var peso = parseInt(usuario);
+        var gTierra = 9.8;
+        var gMarte = 3.7;
+        var gJupiter = 24.8;
+        var mundo;
+        var pesoFinal;
+        if (planeta == 1) {
+        pesoFinal = peso * gMarte / gTierra;
+        mundo = "Marte";
+        }
+        else if (planeta == 2){
+        pesoFinal = peso * gJupiter / gTierra;
+        mundo = "Jupiter";
+        }
+        else{
+          //en esta parte debo colocar (por ahora) un valor de tipo numerio porque
+          //pesoFinal esta con un parseInt que lo obliga a ser tipo Int y no aceptar textos
+        pesoFinal = 5000;
+        mundo = "Groenlandia";
+        }
+        //con este parseInt lo que hacemos es quitar los decimales para volverlo un entero o Integer
+        pesoFinal = parseInt(pesoFinal);
+        document.write("tu peso en " + mundo + " es <STRONG>" + pesoFinal + " Kilos</STRONG>");
+    </script>
+  </BODY>
+</HTML>
